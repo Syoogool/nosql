@@ -1,0 +1,58 @@
+body {
+  font-size: 15px; }
+
+.test {
+  margin: 5px 10px 20px 30px; }
+
+ul {
+  height: 20px; }
+  ul li {
+    line-height: 100%;
+    float: left; }
+    ul li a {
+      color: red; }
+      ul li a:hover {
+        color: blue; }
+
+.demo {
+  margin-left: auto;
+  margin-right: auto; }
+
+h1, .speaker {
+  border: 4px solid #ff9aa9; }
+
+.speaker {
+  border-width: 2px; }
+
+#header h1, #header .speaker {
+  color: transperen;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+#header h1, #header .speaker {
+  width: 300px; }
+
+.ib {
+  display: inline-block; }
+
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.item-3 {
+  width: 6em; }
+
+.puma-icon {
+  background-image: url("/images/puma,png"); }
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug,png"); }
+
+.agret-icon {
+  background-image: url("/images/agret,png"); }
+
+.salamander-icon {
+  background-image: url("/images/salamander,png"); }

@@ -1,0 +1,23 @@
+{
+	"code":"000",
+	"message":"OK",
+	"content":[{"bingfa":2000,
+		"mingzhong":"使用率65%",
+		"shujuliang":"数据量100W",
+		"duxie":"只读",
+		"chijiu":"数据非常重要",
+		"gongwang":"跨公网",
+		"jiegou":"使用多种数据结构",
+		"fangan":"redis-sorted set数据结构,集群架构",
+		"nummachine":2,
+		"cuowulv":0.0,
+		"tuntuliang":347.22,
+		"kuorong":"建立一主多从或集群架构。\nRedis的作者提出了一种叫做presharding的方案来解决动态扩容和数据分区的问题，实际就是在同一台机器上部署多个Redis实例的方式，当容量不够时将多个实例拆分到不同的机器上，这样实际就达到了扩容的效果。\n拆分过程如下:\n1.在新机器上启动好对应端口的Redis实例。\n2.配置新端口为待迁移端口的从库。\n3.待复制完成，与主库完成同步后，切换所有客户端配置到新的从库的端口。\n4.配置从库为新的主库。\n5.移除老的端口实例。\n6.重复上述过程迁移好所有的端口到指定服务器上。","beifen":"多服务器下，可以使用RDB做数据持久化，默认情况下60秒刷新到disk一次[save 60 10000 当有1w条keys数据被改变时]，Redis的数据集保存在叫dump.rdb一个二进制文件，这种策略被称为快照。","qianyi":"在业内，常见的redis数据迁移方式有以下三种：aof（日志文件）、rdb（快照文件）、replication（主从复制）。\n其中，aof和rdb两种方式适用于跨网络（网络隔离）的redis实例之间的数据迁移，在源实例上通过指令（bgrewriteaof/bgsave）生成aof或者rdb文件 -> 下载数据文件 -> 上传数据文件 -> 启动目标实例，完成数据迁移。aof和rdb的差异，主要体现在数据格式和数据加载速度两个方面，前者是纯文本格式（redis文本协议的流水记录），加载的过程相当于历史重放，而后者是二进制格式，直接进行加载，所以一般情况下rdb数据加载会比aof加载快！这也是网上建议使用rdb做跨网络数据迁移的一个重要的原因。"
+		},
+	{
+		"struct":["redis-sortedset集群","redis-sortedset主从","redis-list主从","redis-hashmap集群","redis-hashmap主从","ssdb-list主从","ssdb-hashmap主从","ssdb-sortedset主从","redis-list集群"],
+	 	"cuowulv":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.07],
+		"tuntuliang":[347.22,346.47,345.37,338.85,338.3,116.63,51.99,22.85,346.96]
+		}
+	]
+}
